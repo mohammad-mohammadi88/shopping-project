@@ -27,3 +27,11 @@
     display: none !important;
   }
 }
+
+#navSticky .nav-sticky-block {
+  display: block !important;
+}
+#navSticky .nav-sticky-block li a {
+  display: block !important;
+  padding-block: 6px;
+}

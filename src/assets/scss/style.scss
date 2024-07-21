@@ -1,8 +1,6 @@
-
 //nav top style
 .nav-top{
     background-color: #40D8FF;
-
     .nav-top-link{
         a:hover{
             color: rgb(99, 105, 218) !important;
@@ -15,9 +13,8 @@
             transition: 0.3s;
             cursor: pointer;
             a{
-            color: rgb(99, 105, 218) !important;
-            transition: 0.3s;
-                
+                color: rgb(99, 105, 218) !important;
+                transition: 0.3s; 
             }
         }
         .middle-nav-top-icon{
@@ -32,6 +29,18 @@
     @media screen and (max-width:768px) {
         .sm-hidden{
             display: none !important;
+        }
+    }
+}
+//nav sticky style
+#navSticky{
+    .nav-sticky-block{
+        display: block !important;
+        li{
+            a{
+                display: block !important;
+                padding-block: 6px;
+            }
         }
     }
 }
