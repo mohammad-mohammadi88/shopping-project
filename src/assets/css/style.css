@@ -1,0 +1,29 @@
+.nav-top {
+  background-color: #40D8FF;
+}
+.nav-top .nav-top-link a:hover {
+  color: rgb(99, 105, 218) !important;
+  transition: 0.3s;
+}
+.nav-top .hover-dark-blue:hover {
+  color: rgb(99, 105, 218);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.nav-top .hover-dark-blue:hover a {
+  color: rgb(99, 105, 218) !important;
+  transition: 0.3s;
+}
+.nav-top .hover-dark-blue .middle-nav-top-icon {
+  transform: translateY(5px);
+}
+@media screen and (max-width: 1200px) {
+  .nav-top .lg-hidden {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-top .sm-hidden {
+    display: none !important;
+  }
+}
