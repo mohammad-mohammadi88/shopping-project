@@ -80,42 +80,62 @@
     <nav class="container p-3" id="nav-bottom">
         <div class="row">
             <div class="col-12 mt-3 col-md-6 d-flex text-nowrap">
-                <div class="">
-                    <button type="button" class="btn btn-primary modal-button bg-primary d-inline-block float-left text-nowrap" data-bs-toggle="modal"
+                <div>
+                    <button type="button" class="btn btn-primary ms-2 ms-md-0 modal-button bg-primary d-inline-block float-left text-nowrap" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">
                         ورود / عضویت
                     </button>
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
+                    <div class="modal fade" id="staticBackdrop"
+                       >
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content"> 
+                                <form action="" id="loginForm">  
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">ورود</h5>
+                                    <h5 class="modal-title">فرم ورود</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <br>
-                                    <form action="">
-                                        <div class="username modal-input position-relative">
-                                            <input type="text" name="userName" class="form-control" id="userName"
-                                                placeholder=" " required>
-                                            <label for="userName"
-                                                class="form-label position-absolute bg-white text-secondary">نام
-                                                کاربری</label>
-                                        </div>
-                                        <div class="password modal-input position-relative">
-                                            <input type="password" name="password" class="form-control" id="password"
-                                                placeholder=" " required>
-                                            <label for="password"
-                                                class="form-label position-absolute bg-white text-secondary">کلمه
-                                                عبور</label>
-                                        </div>
-                                    </form>
+                                    <div class="username modal-input position-relative">
+                                        <input type="text" name="userName" class="form-control" id="userName" placeholder=" " required>
+                                        <label for="userName" class="form-label position-absolute bg-white text-secondary">نام کاربری فعلی...</label>
+                                    </div>
+                                    <div class="password modal-input position-relative">
+                                        <input type="password" name="password" class="form-control" id="password" placeholder=" " required>
+                                        <label for="password" class="form-label position-absolute bg-white text-secondary">کلمه عبور فعلی...</label>
+                                    </div>
+                                    <div class="input-group" dir="rtl">
+                                        <input type="checkbox"class="ms-2 me-1" name="checkbox" id="checkbox">
+                                        <label for="checkbox">مرا به یاد داشته باش</label>
+                                    </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
-                                    <a href="login.html" class="btn btn-primary">عضویت</a>
+                            </form>
+                            <form action="" id="assignForm" hidden>  
+                                <div class="modal-header">
+                                    <h5 class="modal-title">فرم عضویت</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                <br>
+                                <div class="username modal-input position-relative">
+                                    <input type="text" name="userName" class="form-control" id="userName" placeholder=" " required>
+                                    <label for="userName" class="form-label position-absolute bg-white text-secondary">نام کاربری...</label>
+                                </div>
+                                <div class="password modal-input position-relative">
+                                    <input type="password" name="password" class="form-control" id="password" placeholder=" " required>
+                                    <label for="password" class="form-label position-absolute bg-white text-secondary">کلمه عبور...</label>
+                                </div>
+                                </div>
+                            </form>
+                                <div class="modal-footer" id="modalFooterLogin">
+                                    <button type="button" class="btn btn-secondary" id="assignFormOpen">عضویت</button>
+                                    <a href="#" class="btn btn-primary">ورود</a>
+                                </div>
+                                <div class="modal-footer" id="modalFooterAssign" hidden>
+                                    <button type="button" class="btn btn-secondary" id="loginFormOpen">ورود</button>
+                                    <a href="#" class="btn btn-primary">عضویت</a>
                                 </div>
                             </div>
                         </div>
@@ -135,8 +155,23 @@
         </div>
     </nav>
     <!-- nav bottom section end -->
-
-
+    <!-- hero header section start -->
+    <header class="container my-3 py-2" id="header">
+        <div class="row position-relative">
+            <div class="col-md-6 col-12 header-information mt-5 d-flex align-items-center flex-column">
+                <h1>ایران مارکت</h1>
+                <p class="text-center w-75 p-0 p-3 ">ایران مارکت یکی از معتبر ترین فروشگاه هایی 
+                    است که در ایران وجود دارد و شما میتوانید بدون نگرانی
+                     در سریع ترین زمان ممکن کالای مورد
+                    نظر خود را دریافت کنید</p>
+                    <a href="" class="btn p-2 text-center" style="background-color: #5BDDFF;">بریم خرید کنیم</a>
+            </div>
+            <div class="col-12 col-md-6 header-image d-none d-md-block">
+                <img src="img/header image.jpg" class="img-fluid w-100" alt="header image">
+            </div>
+        </div>
+    </header>
+    <!-- hero header section end -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

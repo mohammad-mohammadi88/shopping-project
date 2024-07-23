@@ -90,44 +90,15 @@ body{
         }
     }
 }
-.login-container{
-    max-width: 750px;
-    background-color: lime;
-    .login-modal-input{
-        height: 60px !important;
-    }
-    
-    input:placeholder-shown ~ label{
-        top: 8px;
-        transition: 0.3s ease;
-        font-size: 16px;
-        right: 12px;
-    }
-    input:focus ~ label,input:active ~ label{
-        top: -8px;
-        right: 12px;
-        font-size: 14px;  
-    }
-    label{
-        top: -8px;
-        right: 12px;
-        font-size: 14px;
-        transition: 0.3s ease;
-    }
-    #search{
-        outline: none !important;
-        width: 10vw !important;
-        // min-width: 200px;
-        // width: calc(100% - 90%) !important;
-        border: 2px solid #1c1c1c;
-    }
-    
-    .magnifying-glass{
 
-        &:hover{
-            transition: 0.3s ease;
-            background-color: #efefef !important;
-        }
-    }
-    
-}
+//hero header style
+// @media screen and (max-width:768px){
+//     .overflow{
+//         opacity: 0.7;
+//         // backdrop-filter: blur(23px);
+//     }
+//     .header-information{
+//         position: absolute;
+//         color: #fff; 
+//     }
+// }

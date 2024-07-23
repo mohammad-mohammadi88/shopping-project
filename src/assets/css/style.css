@@ -82,37 +82,3 @@ body {
 .modal-input input:nth-child(1) {
   margin-bottom: 2rem;
 }
-
-.login-container {
-  max-width: 750px;
-  background-color: lime;
-}
-.login-container .login-modal-input {
-  height: 60px !important;
-}
-.login-container input:placeholder-shown ~ label {
-  top: 8px;
-  transition: 0.3s ease;
-  font-size: 16px;
-  right: 12px;
-}
-.login-container input:focus ~ label, .login-container input:active ~ label {
-  top: -8px;
-  right: 12px;
-  font-size: 14px;
-}
-.login-container label {
-  top: -8px;
-  right: 12px;
-  font-size: 14px;
-  transition: 0.3s ease;
-}
-.login-container #search {
-  outline: none !important;
-  width: 10vw !important;
-  border: 2px solid #1c1c1c;
-}
-.login-container .magnifying-glass:hover {
-  transition: 0.3s ease;
-  background-color: #efefef !important;
-}
