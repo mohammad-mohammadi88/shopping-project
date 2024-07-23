@@ -1,3 +1,14 @@
+body{
+    overflow-x: hidden;
+    transform: translateX(0px) !important;
+}
+.container,.container-fluid{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.container-fluid{
+    width: 100vw;
+}
 //nav top style
 .nav-top{
     background-color: #40D8FF;
@@ -41,6 +52,82 @@
                 display: block !important;
                 padding-block: 6px;
             }
+            @media screen and (max-width:992px) {
+                &:nth-child(2){
+                    margin-right: 1rem !important;
+                }
+            }
         }
     }
+}
+//modal
+.modal-button{
+    width: auto !important;
+}
+.modal-input{
+    direction: rtl;
+    input:placeholder-shown ~ label{
+        top: 8px;
+        transition: 0.3s ease;
+        font-size: 16px;
+        right: 12px;
+    }
+    input:focus ~ label,input:active ~ label{
+        top: -13px;
+        right: 12px;
+        font-size: 14px;  
+    }
+    label{
+        top: -13px;
+        right: 12px;
+        font-size: 14px;
+        transition: 0.3s ease;
+    }
+    input{
+        // margin-bottom: 1rem;
+        &:nth-child(1){
+            margin-bottom: 2rem;
+        }
+    }
+}
+.login-container{
+    max-width: 750px;
+    background-color: lime;
+    .login-modal-input{
+        height: 60px !important;
+    }
+    
+    input:placeholder-shown ~ label{
+        top: 8px;
+        transition: 0.3s ease;
+        font-size: 16px;
+        right: 12px;
+    }
+    input:focus ~ label,input:active ~ label{
+        top: -8px;
+        right: 12px;
+        font-size: 14px;  
+    }
+    label{
+        top: -8px;
+        right: 12px;
+        font-size: 14px;
+        transition: 0.3s ease;
+    }
+    #search{
+        outline: none !important;
+        width: 10vw !important;
+        // min-width: 200px;
+        // width: calc(100% - 90%) !important;
+        border: 2px solid #1c1c1c;
+    }
+    
+    .magnifying-glass{
+
+        &:hover{
+            transition: 0.3s ease;
+            background-color: #efefef !important;
+        }
+    }
+    
 }

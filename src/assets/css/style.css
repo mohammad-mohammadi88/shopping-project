@@ -1,3 +1,17 @@
+body {
+  overflow-x: hidden;
+  transform: translateX(0px) !important;
+}
+
+.container, .container-fluid {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.container-fluid {
+  width: 100vw;
+}
+
 .nav-top {
   background-color: #40D8FF;
 }
@@ -34,4 +48,71 @@
 #navSticky .nav-sticky-block li a {
   display: block !important;
   padding-block: 6px;
+}
+@media screen and (max-width: 992px) {
+  #navSticky .nav-sticky-block li:nth-child(2) {
+    margin-right: 1rem !important;
+  }
+}
+
+.modal-button {
+  width: auto !important;
+}
+
+.modal-input {
+  direction: rtl;
+}
+.modal-input input:placeholder-shown ~ label {
+  top: 8px;
+  transition: 0.3s ease;
+  font-size: 16px;
+  right: 12px;
+}
+.modal-input input:focus ~ label, .modal-input input:active ~ label {
+  top: -13px;
+  right: 12px;
+  font-size: 14px;
+}
+.modal-input label {
+  top: -13px;
+  right: 12px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+.modal-input input:nth-child(1) {
+  margin-bottom: 2rem;
+}
+
+.login-container {
+  max-width: 750px;
+  background-color: lime;
+}
+.login-container .login-modal-input {
+  height: 60px !important;
+}
+.login-container input:placeholder-shown ~ label {
+  top: 8px;
+  transition: 0.3s ease;
+  font-size: 16px;
+  right: 12px;
+}
+.login-container input:focus ~ label, .login-container input:active ~ label {
+  top: -8px;
+  right: 12px;
+  font-size: 14px;
+}
+.login-container label {
+  top: -8px;
+  right: 12px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+.login-container #search {
+  outline: none !important;
+  width: 10vw !important;
+  border: 2px solid #1c1c1c;
+}
+.login-container .magnifying-glass:hover {
+  transition: 0.3s ease;
+  background-color: #efefef !important;
 }
