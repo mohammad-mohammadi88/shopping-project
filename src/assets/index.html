@@ -14,7 +14,7 @@
     <title>ایران هولدینگ</title>
 </head>
 
-<body>
+<body class="position-relative">
     <!-- nav top section start -->
     <nav class="nav-top container-fluid p-4 border">
         <div class="container mt-2">
@@ -52,18 +52,18 @@
     </nav>
     <!-- nav top section end -->
     <!-- nav sticky section start -->
-    <nav class="container-fluid p-3 border bg-secondary position-sticky top-0" id="navSticky" dir="rtl">
+    <nav class="container-fluid p-3 border border-3 bg-secondary position-sticky top-0" id="navSticky" dir="rtl">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <ul class="d-flex">
                         <li class="mx-3 list-unstyled d-block d-md-none mt-3"><a href="javascript:void(0)"
-                                class="fa fa-bars text-dark text-decoration-none fw-bold fs-2"
+                                class="fa fa-bars text-dark text-decoration-none fw-bold fs-2 position-relative"
                                 id="barsOpen"></a></li>
                         <li class="ms-3 list-unstyled mt-2"><a href=""
                                 class="text-light text-decoration-none d-none d-md-block fw-bold">خانه</a></li>
                         <li class="mx-3 list-unstyled mt-2"><a href=""
-                                class="text-light text-decoration-none d-none d-md-block fw-bold">تکنولوژی</a></li>
+                                class="text-light text-decoration-none d-none d-md-block fw-bold">پوشاک</a></li>
                         <li class="mx-3 list-unstyled mt-2"><a href=""
                                 class="text-light text-decoration-none d-none d-md-block fw-bold">لوازم خانگی</a></li>
                         <li class="mx-3 list-unstyled mt-2"><a href=""
@@ -156,7 +156,7 @@
     </nav>
     <!-- nav bottom section end -->
     <!-- hero header section start -->
-    <header class="container my-3 py-2" id="header">
+    <header class="container my-3 py-2 mt-5" id="header">
         <div class="row position-relative">
             <div class="col-md-6 col-12 header-information mt-5 d-flex align-items-center flex-column">
                 <h1>ایران مارکت</h1>
@@ -172,7 +172,19 @@
         </div>
     </header>
     <!-- hero header section end -->
-
+    <div class="position-absolute border bg-custom-primary blue-box-1 "></div>
+    <!-- mini cards section start -->
+    <section class="mini-cards container mt-5 juctify-cotent-center" dir="ltr">
+        <div class="row">
+            <div class="col-xxl-2 col-md-4 mt-3 offset-xxl-1 col-6" dir="rtl"><div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i class="fa fa-heart fs-4"></i><span class="fw-bold me-1">رضایتمندی مشتریان</span></div></div>
+            <div class="col-xxl-2 col-md-4 mt-3 col-6" dir="rtl"><div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i class="fa fa-tags fs-4"></i><span class="fw-bold me-1">همیشه پر از تخفیف</span></div></div>
+            <div class="col-xxl-2 col-md-4 mt-3 col-6" dir="rtl"><div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i class="fa-solid fa-truck-fast fs-4"></i><span class="fw-bold me-1">ارسال سریع به کشور</span></div></div>
+            <div class="col-xxl-2 offset-xxl-0 offset-md-2 col-md-4 mt-3 col-6" dir="rtl"><div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i class="fa-solid fa-basket-shopping fs-4"></i><span class="fw-bold me-1">محصولات متنوع </span></div></div>
+            <div class="col-xxl-2 offset-md-0 offset-3 col-md-4 mt-3 col-6" dir="rtl"><div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i class="fa-sharp fa-solid fa-dolly fs-4"></i><span class="fw-bold me-1">ارسال رایگان به کشور</span></div></div>
+        </div>
+    </section>
+    <!-- mini cards section end -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
