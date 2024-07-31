@@ -157,11 +157,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="input-group d-inline-block float-left text-nowrap">
-                    <input type="search" name="search" class="ms-4 me-2 p-1 rounded-pill border border-2" id="search"
-                        placeholder="جستجو..." dir="rtl">
-                </div>
             </div>
             <div class="d-none d-md-block col-md-6" dir="rtl">
                 <div class="nav-logo me-4" style="transform: translateX(30px);">
@@ -270,7 +265,19 @@
     <div class="position-absolute border bg-custom-primary blue-box-2 blue-box"></div>
     <!-- goods part start -->
     <section class="goods container mt-5 p-5">
-        <h2 class="mb-4">products</h2>
+        <div class="d-flex justify-content-between">
+            <h2 class="mb-4">products</h2>
+            <div class="input-group d-inline-block float-left text-nowrap">
+                <label for="search" class="position-relative searchLabel">
+                    <input type="search" list="brow" name="search" id="search" class="ms-4 me-2 p-2 rounded-pill border border-2" id="search" placeholder="search...">
+                    <datalist id="brow">
+                        <option value="all">
+                        
+                      </datalist>  
+                    <span id="overlay"></span>
+                </label>
+            </div>
+        </div>
         <div class="row">
         </div>
     </section>

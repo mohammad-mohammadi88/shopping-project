@@ -99,7 +99,18 @@ body{
         }
     }
 }
-
+.searchLabel{
+    #search{
+        font-size: 20px;
+    }
+    #overlay{
+        position: absolute;
+        font-size: 20px;
+        top: 10px;
+        left: 34px;
+        color: rgba(205, 186, 186, 0.4);
+    }
+}
 .blue-box{
     height: 100px;
     aspect-ratio: 2 / 1;
