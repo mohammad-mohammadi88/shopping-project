@@ -46,6 +46,7 @@ body{
 //nav sticky style
 #navSticky{
     z-index: 999;
+    background-color: rgb(84, 128, 144);
 }
 .nav-sticky-block ul{
     display: block !important;
@@ -68,9 +69,9 @@ body{
 //modal
 .modal-custom-dialog{
     // position: fixed !important;
-    top: 28% !important;
-    left: 12.5% !important;
-    transform: translate(-50%,-50%) !important; 
+    top: 50vh !important;
+    // left: 12.5% !important;
+    transform: translate(0,-50%) !important; 
 }
 .modal-button{
     width: auto !important;
@@ -125,21 +126,26 @@ body{
 .bg-custom-secondary{
     background-color: #efefef;
 }
-.mini-cards{
-    .col-2{
-        div{
-            height:max-content
-        }
-    }
-}
+
 
 //products part style
 .bg-custom-info{
     background-color: #00ffd0;
 }
+// #productSelect{
+//     border-radius: 5px;
+//     border: 2px solid black !important;
+//     option{
+//         padding: 4px;
+//     } 
+    
+// }
 .goods{
     .product-cards{
         cursor: pointer; 
+        .product-header{
+            top: -15px;
+        }
         &:hover{
             transform: scale(1.025);
             transition: 0.4s ease;
@@ -173,4 +179,63 @@ body{
             font-size: 13px;
         }
     }
+}
+//footer style 
+.footer{
+    background:linear-gradient(to right,#004f80,#0072b9) ;
+    min-height:470px; 
+    padding-bottom: 0 !important;
+    h2{
+        width: 100vw;
+        border-top: 2px solid #ccc;
+    }
+    .container{
+        .footer-heading{
+            transform: translateX(-30px);
+        }
+        #footerCategory{
+            li{
+                font-size: 1.1rem;
+                cursor: pointer;
+                &:hover{
+                    transform: translateX(-10px);
+                    transition: 0.6s ;
+                }
+            }
+        }
+        .social-media-icons{
+            li{
+
+                a{
+                    &:hover{
+                        i{
+                            transform: scale(1.2);
+                        
+                            transition: .4s;
+                        }
+                    }
+                }
+            }
+        }
+        .gray-hover{
+            filter: grayscale(1);
+            height: 60px;
+            aspect-ratio: 1/1;
+            cursor: pointer;
+            transition: .6s;
+            &:hover{
+                filter: grayscale(0);
+            }
+        }
+    }
+    @media screen and (min-width:992px) {
+        clip-path: polygon(0% 0%,100% 25%,100% 100%,0% 100%);
+        
+        .container{
+            transform: translateY(150px);
+        }
+    }
+}
+.last-text{
+    background:linear-gradient(to right,#004f80,#0072b9);
 }

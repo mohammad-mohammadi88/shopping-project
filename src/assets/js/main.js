@@ -1,5 +1,7 @@
 'use strict';
-barsOpen.onclick = () => { document.querySelector('#navSticky').classList.toggle('nav-sticky-block'); };
+const goods = document.querySelector(".goods div.row");
+const footerCategory = document.getElementById('footerCategory');
+barsOpen.onclick = () => {document.querySelector('#navSticky').classList.toggle('nav-sticky-block')};
 assignFormOpen.onclick = () => {
     assignForm.hidden = false;
     modalFooterAssign.hidden = false;
@@ -12,15 +14,16 @@ loginFormOpen.onclick = () => {
     modalFooterLogin.hidden = false;
     loginForm.hidden = false
 }
-const goods = document.querySelector(".goods div.row");
-
-let product = fetch('https://fakestoreapi.com/products').then(api => api.json()).then(res => {
+let product = fetch('https://fakestoreapi.com/products').then(api => api.json());
+let categories = fetch('https://fakestoreapi.com/products/categories').then(api => api.json());
+product.then(res => {
     res.map(res => {
         let price = Math.round(Number(res.price)) * 2;
         goods.innerHTML += `
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card product-cards mx-0 my-2 p-2">
-                <div class="product-image mb-2 position-relative">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product" title="${res.category}">
+            <div class="card product-cards mx-0 position-relative my-3 p-2">
+                <h5 class="mb-5 position-absolute product-header text-muted bg-white">${res.category}</h5>
+                <div class="product-image mb-2 mt-3 position-relative">
                     <img class="img-fluid" src="${res.image}" alt="product image">
                     <span class="position-absolute bottom-0 bg-custom-info py-1 px-2 start-0 rounded-3"><i class="me-1 fa fa-star"></i>${res.rating.rate}</span>
                 </div>
@@ -37,6 +40,11 @@ let product = fetch('https://fakestoreapi.com/products').then(api => api.json())
                     <span class="py-2 px-2 rounded-3">${res.rating.count}<i class="ms-1 d-inine fa fa-user-edit"></i></span>
                 </div>
             </div>
-        </div>`
+        </div>`;
+        
     })
+});
+categories.then(res=>{
+    res.map(res=>{
+    footerCategory.innerHTML += `<li class="list-unstyled py-1 text-decoration-none text-white">${res}</li>`})
 })

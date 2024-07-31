@@ -52,7 +52,7 @@
     </nav>
     <!-- nav top section end -->
     <!-- nav sticky section start -->
-    <nav class="container-fluid p-3 border border-3 bg-secondary position-sticky top-0" id="navSticky" dir="rtl">
+    <nav class="container-fluid p-3 border border-3 position-sticky top-0" id="navSticky" dir="rtl">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -78,57 +78,73 @@
     <!-- nav sticky section end -->
     <!-- nav bottom section start -->
     <nav class="container p-3" id="nav-bottom">
+        <div class="row mb-3 mx-4">
+            <marquee direction="ltr" class=" text-bold fs-5">ایران مارکت یکی از معتبرترین فروشگاه اینترنتی ایران هست و شما میتوانید با کمترین قیمت ممکن کالای مورد نظر را خریداری کنید</marquee>
+        </div>
         <div class="row">
             <div class="col-12 mt-3 col-md-6 d-flex text-nowrap">
                 <div>
-                    <button type="button" class="btn btn-primary ms-2 ms-md-0 modal-button bg-primary d-inline-block float-left text-nowrap" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">
+                    <button type="button"
+                        class="btn btn-primary ms-2 ms-md-0 modal-button bg-primary d-inline-block float-left text-nowrap"
+                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         ورود / عضویت
                     </button>
                     <div class="modal fade" id="staticBackdrop">
-                       
+
                         <div class="modal-dialog modal-dialog-centered modal-custom-dialog">
-                            <div class="modal-content"> 
-                                <form action="" id="loginForm">  
-                                <div class="modal-header">
-                                    <h5 class="modal-title">فرم ورود</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <br>
-                                    <div class="username modal-input position-relative">
-                                        <input type="text" name="userName" class="form-control" id="userName" placeholder=" " required>
-                                        <label for="userName" class="form-label position-absolute bg-white text-secondary">نام کاربری فعلی...</label>
+                            <div class="modal-content">
+                                <form action="" id="loginForm">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">فرم ورود</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                     </div>
-                                    <div class="password modal-input position-relative">
-                                        <input type="password" name="password" class="form-control" id="password" placeholder=" " required>
-                                        <label for="password" class="form-label position-absolute bg-white text-secondary">کلمه عبور فعلی...</label>
+                                    <div class="modal-body">
+                                        <br>
+                                        <div class="username modal-input position-relative">
+                                            <input type="text" name="loginUserName" class="form-control"
+                                                id="loginUserName" placeholder=" " required>
+                                            <label for="loginUserName"
+                                                class="form-label position-absolute bg-white text-secondary">نام کاربری
+                                                فعلی...</label>
+                                        </div>
+                                        <div class="password modal-input position-relative">
+                                            <input type="password" name="loginPassword" class="form-control"
+                                                id="loginPassword" placeholder=" " required>
+                                            <label for="loginPassword"
+                                                class="form-label position-absolute bg-white text-secondary">کلمه عبور
+                                                فعلی...</label>
+                                        </div>
+                                        <div class="input-group" dir="rtl">
+                                            <input type="checkbox" class="ms-2 me-1" name="checkbox" id="checkbox">
+                                            <label for="checkbox">مرا به یاد داشته باش</label>
+                                        </div>
                                     </div>
-                                    <div class="input-group" dir="rtl">
-                                        <input type="checkbox"class="ms-2 me-1" name="checkbox" id="checkbox">
-                                        <label for="checkbox">مرا به یاد داشته باش</label>
+                                </form>
+                                <form action="" id="assignForm" hidden>
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">فرم عضویت</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                     </div>
-                                </div>
-                            </form>
-                            <form action="" id="assignForm" hidden>  
-                                <div class="modal-header">
-                                    <h5 class="modal-title">فرم عضویت</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                <br>
-                                <div class="username modal-input position-relative">
-                                    <input type="text" name="userName" class="form-control" id="userName" placeholder=" " required>
-                                    <label for="userName" class="form-label position-absolute bg-white text-secondary">نام کاربری...</label>
-                                </div>
-                                <div class="password modal-input position-relative">
-                                    <input type="password" name="password" class="form-control" id="password" placeholder=" " required>
-                                    <label for="password" class="form-label position-absolute bg-white text-secondary">کلمه عبور...</label>
-                                </div>
-                                </div>
-                            </form>
+                                    <div class="modal-body">
+                                        <br>
+                                        <div class="username modal-input position-relative">
+                                            <input type="text" name="userName" class="form-control" id="userName"
+                                                placeholder=" " required>
+                                            <label for="userName"
+                                                class="form-label position-absolute bg-white text-secondary">نام
+                                                کاربری...</label>
+                                        </div>
+                                        <div class="password modal-input position-relative">
+                                            <input type="password" name="password" class="form-control" id="password"
+                                                placeholder=" " required>
+                                            <label for="password"
+                                                class="form-label position-absolute bg-white text-secondary">کلمه
+                                                عبور...</label>
+                                        </div>
+                                    </div>
+                                </form>
                                 <div class="modal-footer" id="modalFooterLogin">
                                     <button type="button" class="btn btn-secondary" id="assignFormOpen">عضویت</button>
                                     <a href="#" class="btn btn-primary">ورود</a>
@@ -141,13 +157,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="input-group d-inline-block float-left text-nowrap">
-                    <input type="search" name="search" class="ms-4 me-2 p-1 rounded-pill border border-2" id="search" placeholder="جستوجو..." dir="rtl">
+                    <input type="search" name="search" class="ms-4 me-2 p-1 rounded-pill border border-2" id="search"
+                        placeholder="جستجو..." dir="rtl">
                 </div>
             </div>
             <div class="d-none d-md-block col-md-6" dir="rtl">
-                <div class="nav-logo me-4">
+                <div class="nav-logo me-4" style="transform: translateX(30px);">
                     <img src="img/my-logo.jpg" style="height: 60px;aspect-ratio: 1/1;" alt="لوگوی مارکت ایران">
                     <span class="fs-5 me-2">مارکت ایران</span>
                 </div>
@@ -160,11 +177,11 @@
         <div class="row position-relative">
             <div class="col-md-6 col-12 header-information mt-5 d-flex align-items-center flex-column">
                 <h1>ایران مارکت</h1>
-                <p class="text-center w-75 p-0 p-3 ">ایران مارکت یکی از معتبر ترین فروشگاه هایی 
+                <p class="text-center w-75 p-0 p-3 ">ایران مارکت یکی از معتبر ترین فروشگاه هایی
                     است که در ایران وجود دارد و شما میتوانید بدون نگرانی
-                     در سریع ترین زمان ممکن کالای مورد
+                    در سریع ترین زمان ممکن کالای مورد
                     نظر خود را دریافت کنید</p>
-                    <a href="" class="btn p-2 text-center" style="background-color: #5BDDFF;">بریم خرید کنیم</a>
+                <a href="" class="btn p-2 text-center" style="background-color: #5BDDFF;">بریم خرید کنیم</a>
             </div>
             <div class="col-12 col-md-6 header-image d-none d-md-block">
                 <img src="img/header image.jpg" class="img-fluid w-100" alt="header image">
@@ -174,50 +191,78 @@
     <!-- hero header section end -->
     <div class="position-absolute border bg-custom-primary blue-box-1 blue-box "></div>
     <!-- mini cards section start -->
-    <section class="mini-cards container mt-5 juctify-cotent-center" dir="ltr">
+    <section class="mini-cards container mt-5 justify-content-center" dir="ltr">
         <div class="row">
-            <div class="col-xxl-2 col-md-4 mt-3 offset-xxl-1 col-6" dir="rtl"><div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i class="fa fa-heart fs-4"></i><span class="fw-bold me-1">رضایتمندی مشتریان</span></div></div>
-            <div class="col-xxl-2 col-md-4 mt-3 col-6" dir="rtl"><div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i class="fa fa-tags fs-4"></i><span class="fw-bold me-1">همیشه پر از تخفیف</span></div></div>
-            <div class="col-xxl-2 col-md-4 mt-3 col-6" dir="rtl"><div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i class="fa-solid fa-truck-fast fs-4"></i><span class="fw-bold me-1">ارسال سریع به کشور</span></div></div>
-            <div class="col-xxl-2 offset-xxl-0 offset-md-2 col-md-4 mt-3 col-6" dir="rtl"><div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i class="fa-solid fa-basket-shopping fs-4"></i><span class="fw-bold me-1">محصولات متنوع </span></div></div>
-            <div class="col-xxl-2 offset-md-0 offset-3 col-md-4 mt-3 col-6" dir="rtl"><div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i class="fa-sharp fa-solid fa-dolly fs-4"></i><span class="fw-bold me-1">ارسال رایگان به کشور</span></div></div>
+            <div class="col-xxl-2 col-md-4 mt-3 offset-xxl-1 col-6" dir="rtl">
+                <div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i
+                        class="fa fa-heart fs-4"></i><span class="fw-bold me-1">رضایتمندی مشتریان</span></div>
+            </div>
+            <div class="col-xxl-2 col-md-4 mt-3 col-6" dir="rtl">
+                <div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i
+                        class="fa fa-tags fs-4"></i><span class="fw-bold me-1">همیشه پر از تخفیف</span></div>
+            </div>
+            <div class="col-xxl-2 col-md-4 mt-3 col-6" dir="rtl">
+                <div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i
+                        class="fa-solid fa-truck-fast fs-4"></i><span class="fw-bold me-1">ارسال سریع به کشور</span>
+                </div>
+            </div>
+            <div class="col-xxl-2 offset-xxl-0 offset-md-2 col-md-4 mt-3 col-6" dir="rtl">
+                <div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i
+                        class="fa-solid fa-basket-shopping fs-4"></i><span class="fw-bold me-1">محصولات متنوع </span>
+                </div>
+            </div>
+            <div class="col-xxl-2 offset-md-0 offset-3 col-md-4 mt-3 col-6" dir="rtl">
+                <div class="border bg-custom-secondary rounded mx-1 d-flex justify-content-center px-2 py-3"><i
+                        class="fa-sharp fa-solid fa-dolly fs-4"></i><span class="fw-bold me-1">ارسال رایگان به
+                        کشور</span></div>
+            </div>
         </div>
     </section>
     <!-- mini cards section end -->
-     <!-- ads section start -->
-     <figure class="container my-5">
+    <!-- ads section start -->
+    <figure class="container my-5">
         <div class="row">
             <div class="col-12 col-lg-8 p-4 p-sm-3 p-lg-3 mb-3">
                 <div id="carousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="https://www.techpluto.com/wp-content/uploads/2021/10/Lays_advertisement-examples.jpg" class="d-block img-fluid w-100" alt="تبلیغات">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://l9rcdn.reval.me/l9rmedia/advertising-campaigns-4.jpg" class="d-block img-fluid w-100" alt="تبلیغات">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://l9rcdn.reval.me/l9rmedia/advertising-campaigns-2.jpg" class="d-block img-fluid w-100" alt="تبلیغات">
-                      </div>
+                        <div class="carousel-item active">
+                            <img src="https://www.techpluto.com/wp-content/uploads/2021/10/Lays_advertisement-examples.jpg"
+                                class="d-block img-fluid w-100" alt="تبلیغات">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://l9rcdn.reval.me/l9rmedia/advertising-campaigns-4.jpg"
+                                class="d-block img-fluid w-100" alt="تبلیغات">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://l9rcdn.reval.me/l9rmedia/advertising-campaigns-2.jpg"
+                                class="d-block img-fluid w-100" alt="تبلیغات">
+                        </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
                     </button>
-                  </div>
+                </div>
             </div>
-            <div class="col-12 col-lg-4 d-sm-flex d-md-block">
-                <div class="col-12 col-sm-6 col-lg-12 p-2 pe-sm-2 pb-lg-3 pt-lg-4"><img src="https://up.plusing.ir/blog/the-standard-size-of-the-website-banner/Site-banner-size-04.jpg" class="img-fluid" alt="تبلیغات"></div>
-                <div class="col-12 col-sm-6 col-lg-12 p-2 ps-sm-2 pt-lg-3"><img src="https://www.yektanet.com/wp-content/uploads/2022/11/kaleh.jpg" class="img-fluid" alt="تبلیغات"></div>
+            <div class="col-12 col-lg-4 d-sm-flex d-lg-block">
+                <div class="col-12 col-sm-6 col-lg-12 p-2 pe-sm-2 pb-lg-3 pt-lg-4"><img
+                        src="https://up.plusing.ir/blog/the-standard-size-of-the-website-banner/Site-banner-size-04.jpg"
+                        class="img-fluid my-auto" alt="تبلیغات" style="height: fit-content;"></div>
+                <div class="col-12 col-sm-6 col-lg-12 p-2 ps-sm-2 pt-lg-3"><img
+                        src="https://www.yektanet.com/wp-content/uploads/2022/11/kaleh.jpg" class="img-fluid"
+                        alt="تبلیغات" style="height: fit-content;"></div>
             </div>
         </div>
     </figure>
@@ -227,11 +272,48 @@
     <section class="goods container mt-5 p-5">
         <h2 class="mb-4">products</h2>
         <div class="row">
-            
         </div>
     </section>
-
     <!-- goods part end -->
+    <!-- footer part start -->
+    <footer class="container-fluid footer footer-clip-path mt-5 p-5" dir="rtl">
+        <div class="container text-white" >
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <h3 class="footer-heading border-bottom pb-3 ms-5">categories</h3>
+                    <ul id="footerCategory">
+                        
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <h3 class="footer-heading border-bottom pt-md-0 pb-3 ms-5">social media</h3>
+                    <ul class="d-flex justify-content-evenly mt-4 social-media-icons">
+                        <li class="list-unstyled"><a href="https://wa.me/+989146360528" class="text-white fs-3"><i class="fab fa-whatsapp"></i></a></li>
+                        <li class="list-unstyled"><a href="https://t.me/MuhammedAltin2009" class="text-white fs-3"><i class="fab fa-telegram"></i></a></li>
+                        <li class="list-unstyled"><a href="https://instagram.com/mohammadmohammadi20091388" class="text-white fs-3"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-unstyled"><a href="https://twitter.com" class="text-white fs-3"><i class="fab fa-x-twitter"></i></a></li>
+                        <li class="list-unstyled"><a href="https://youtube.com" class="text-white fs-3"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12 col-12 mt-5 p-4 m-auto">
+                    <div class="d-flex justify-content-evenly">
+                        
+                        <img class="gray-hover bg-white rounded-1 p-1" src="https://7learn.com/assets/img/brands/bazar.png" alt="کافه بازار">
+                        <img class="gray-hover bg-white rounded-1 p-1" src="https://7learn.com/assets/img/brands/snap-food.png" alt="اسنپ فود">
+                        <img class="gray-hover bg-white rounded-1 p-1" src="https://7learn.com/assets/img/brands/alibaba.png" alt="علی بابا">
+                        <img class="gray-hover bg-white rounded-1 p-1" src="https://7learn.com/assets/img/brands/digikala.svg" alt="دیجی کالا">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="row last-text p-2 position-relative bottom-0">
+        <h2 class="text-center vw-100 text-white">Mohammad Mohammadi</h2>
+    </div>
+
+    <!-- footer part end -->
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
