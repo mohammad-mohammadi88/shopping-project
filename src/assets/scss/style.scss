@@ -68,9 +68,7 @@ body{
 }
 //modal
 .modal-custom-dialog{
-    // position: fixed !important;
     top: 50vh !important;
-    // left: 12.5% !important;
     transform: translate(0,-50%) !important; 
 }
 .modal-button{
@@ -96,7 +94,6 @@ body{
         transition: 0.3s ease;
     }
     input{
-        // margin-bottom: 1rem;
         &:nth-child(1){
             margin-bottom: 2rem;
         }
@@ -132,13 +129,6 @@ body{
 .bg-custom-info{
     background-color: #00ffd0;
 }
-// #productSelect{
-//     border-radius: 5px;
-//     border: 2px solid black !important;
-//     option{
-//         padding: 4px;
-//     } 
-    
 // }
 .goods{
     .product-cards{
