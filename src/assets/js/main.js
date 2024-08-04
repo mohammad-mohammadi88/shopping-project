@@ -1,4 +1,4 @@
-'use strict';
+'use strict';    
 const goods = document.querySelector(".goods div.row");
 const footerCategory = document.getElementById('footerCategory');
 const productFilter = document.getElementById('productFilter');
@@ -25,7 +25,7 @@ product.then(res => {
     res.map(res => {
         let price = Math.round(Number(res.price)) * 2;
         goods.innerHTML += `
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product" title="${res.category}"><div class="card product-cards mx-0 position-relative my-3 p-2"><h5 class="mb-5 position-absolute product-header text-muted bg-white">${res.category}</h5><div class="product-image mb-2 mt-3 position-relative"><img class="img-fluid" src="${res.image}" alt="product image"><span class="position-absolute bottom-0 bg-custom-info py-1 px-2 start-0 rounded-3"><i class="me-1 fa fa-star"></i>${res.rating.rate}</span></div><h4 class="card-title mt-3" title="${res.title}">${res.title}</h4><p class="card-body py-1 fs-6 " title="${res.description}">${res.description}</p><div class="d-flex justify-content-between align-items-end"><span class="pt-1 px-2 rounded-3"><del class="del-price">${price} $</del><span class="reduction-box text-white ms-4 mt-5 fw-bold px-1">50%</span><div class="pt-2 h5">${res.price} $</div></span><span class="py-2 px-2 rounded-3">${res.rating.count}<i class="ms-1 d-inine fa fa-user-edit"></i></span></div></div></div>`;
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product" title="${res.category}"><a class="text-decoration-none text-dark" href="productDetail.html?id=${res.id}"><div class="card product-cards mx-0 position-relative my-3 p-2"><h5 class="mb-5 position-absolute product-header text-muted bg-white">${res.category}</h5><div class="product-image mb-2 mt-3 position-relative"><img class="img-fluid" src="${res.image}" alt="product image"><span class="position-absolute bottom-0 bg-custom-info py-1 px-2 start-0 rounded-3"><i class="me-1 fa fa-star"></i>${res.rating.rate}</span></div><h4 class="card-title mt-3" title="${res.title}">${res.title}</h4><p class="card-body py-1 fs-6 " title="${res.description}">${res.description}</p><div class="d-flex justify-content-between align-items-end"><span class="pt-1 px-2 rounded-3"><del class="del-price">${price} $</del><span class="reduction-box text-white ms-4 mt-5 fw-bold px-1">50%</span><div class="pt-2 h5">${res.price} $</div></span><span class="py-2 px-2 rounded-3">${res.rating.count}<i class="ms-1 d-inine fa fa-user-edit"></i></span></div></div></a></div>`;
     })
 });
 categories.then(res=>{
@@ -34,7 +34,6 @@ categories.then(res=>{
         blow.innerHTML += `<option value="${res}">`
     })
 });
-
 searchInput.addEventListener('input',()=>{
     let isChanged = searchWords.some((word)=>{
         if(searchInput.value.length !== 0 && word.startsWith(searchInput.value)){
@@ -53,7 +52,7 @@ searchInput.addEventListener('keydown',(event)=>{
                 res.map(res => {
                     let price = Math.round(Number(res.price)) * 2;
                     goods.innerHTML += `
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 product" title="${res.category}"><div class="card product-cards mx-0 position-relative my-3 p-2"><h5 class="mb-5 position-absolute product-header text-muted bg-white">${res.category}</h5><div class="product-image mb-2 mt-3 position-relative"><img class="img-fluid" src="${res.image}" alt="product image"><span class="position-absolute bottom-0 bg-custom-info py-1 px-2 start-0 rounded-3"><i class="me-1 fa fa-star"></i>${res.rating.rate}</span></div><h4 class="card-title mt-3" title="${res.title}">${res.title}</h4><p class="card-body py-1 fs-6 " title="${res.description}">${res.description}</p><div class="d-flex justify-content-between align-items-end"><span class="pt-1 px-2 rounded-3"><del class="del-price">${price} $</del><span class="reduction-box text-white ms-4 mt-5 fw-bold px-1">50%</span><div class="pt-2 h5">${res.price} $</div></span><span class="py-2 px-2 rounded-3">${res.rating.count}<i class="ms-1 d-inine fa fa-user-edit"></i></span></div></div></div>`;
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product" title="${res.category}"><a class="text-decoration-none text-dark" href="productDetail.html?id=${res.id}"><div class="card product-cards mx-0 position-relative my-3 p-2"><h5 class="mb-5 position-absolute product-header text-muted bg-white">${res.category}</h5><div class="product-image mb-2 mt-3 position-relative"><img class="img-fluid" src="${res.image}" alt="product image"><span class="position-absolute bottom-0 bg-custom-info py-1 px-2 start-0 rounded-3"><i class="me-1 fa fa-star"></i>${res.rating.rate}</span></div><h4 class="card-title mt-3" title="${res.title}">${res.title}</h4><p class="card-body py-1 fs-6 " title="${res.description}">${res.description}</p><div class="d-flex justify-content-between align-items-end"><span class="pt-1 px-2 rounded-3"><del class="del-price">${price} $</del><span class="reduction-box text-white ms-4 mt-5 fw-bold px-1">50%</span><div class="pt-2 h5">${res.price} $</div></span><span class="py-2 px-2 rounded-3">${res.rating.count}<i class="ms-1 d-inine fa fa-user-edit"></i></span></div></div></a></div>`;
                 })
             });
         }
@@ -64,12 +63,18 @@ searchInput.addEventListener('keydown',(event)=>{
                 return res.filter(el=>el.category == searchInput.value);
             })
             .then(res=>{
-                res.map(product=>{
+                res.map(res=>{
                 let price = Math.round(Number(product.price)) * 2;
-                goods.innerHTML +=`<div class="col-12 col-sm-6 col-md-4 col-lg-3 product" title="${product.category}"><div class="card product-cards mx-0 position-relative my-3 p-2"><h5 class="mb-5 position-absolute product-header text-muted bg-white">${product.category}</h5><div class="product-image mb-2 mt-3 position-relative"><img class="img-fluid" src="${product.image}" alt="product image"><span class="position-absolute bottom-0 bg-custom-info py-1 px-2 start-0 rounded-3"><i class="me-1 fa fa-star"></i>${product.rating.rate}</span></div><h4 class="card-title mt-3" title="${product.title}">${product.title}</h4><p class="card-body py-1 fs-6 " title="${product.description}">${product.description}</p><div class="d-flex justify-content-between align-items-end"><span class="pt-1 px-2 rounded-3"><del class="del-price">${price} $</del><span class="reduction-box text-white ms-4 mt-5 fw-bold px-1">50%</span><div class="pt-2 h5">${product.price} $</div></span><span class="py-2 px-2 rounded-3">${product.rating.count}<i class="ms-1 d-inine fa fa-user-edit"></i></span></div></div></div>`
+                    goods.innerHTML +=`
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product" title="${res.category}"><a class="text-decoration-none text-dark" href="productDetail.html?id=${res.id}"><div class="card product-cards mx-0 position-relative my-3 p-2"><h5 class="mb-5 position-absolute product-header text-muted bg-white">${res.category}</h5><div class="product-image mb-2 mt-3 position-relative"><img class="img-fluid" src="${res.image}" alt="product image"><span class="position-absolute bottom-0 bg-custom-info py-1 px-2 start-0 rounded-3"><i class="me-1 fa fa-star"></i>${res.rating.rate}</span></div><h4 class="card-title mt-3" title="${res.title}">${res.title}</h4><p class="card-body py-1 fs-6 " title="${res.description}">${res.description}</p><div class="d-flex justify-content-between align-items-end"><span class="pt-1 px-2 rounded-3"><del class="del-price">${price} $</del><span class="reduction-box text-white ms-4 mt-5 fw-bold px-1">50%</span><div class="pt-2 h5">${res.price} $</div></span><span class="py-2 px-2 rounded-3">${res.rating.count}<i class="ms-1 d-inine fa fa-user-edit"></i></span></div></div></a></div>`
                 })
             })
         };
 
     }
-})
+});
+function top0(){window.scrollTo(0,0)};
+setTimeout(()=>{
+    body.hidden = false;
+    loading.hidden = true
+},2000)

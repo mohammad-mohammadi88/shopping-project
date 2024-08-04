@@ -1,0 +1,31 @@
+#breadcrumb {
+  padding: 20px 10px 10px 20px !important;
+}
+
+.productDetail-image {
+  height: clamp(400px, 10vh, 700px);
+  width: 100% !important;
+}
+
+#number {
+  width: 80px;
+  height: 40px;
+  transform: translateY(-3px);
+}
+
+.reduction-box {
+  background-color: #d32f2f;
+  border-radius: 2rem;
+  position: relative;
+  top: 13px;
+  font-size: 13px;
+}
+
+.btn-custom-success {
+  font-size: 17px;
+  background-color: rgb(0, 149, 0);
+}
+
+.product-price {
+  bottom: 20px;
+}
