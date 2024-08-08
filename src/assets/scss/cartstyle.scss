@@ -1,0 +1,39 @@
+body{
+    background: url(../img/cart\ bgii.jfif);
+}
+section#cartProducts{
+    max-width: 950px;
+    margin: 0 auto;
+    @media screen and (max-width:567px) {
+        max-width: 80%;
+    }
+    .card{
+        min-height: 300px;
+        
+        .border-dotted{
+            border: 1px dashed #1c1c1c; 
+            text-align: center;
+            img{
+                height: 250px !important;
+                object-fit: contain; 
+            }
+        }
+        .cardTitle{
+            max-height: 30px;
+            overflow: hidden;
+        }
+        .cardDescription{
+            max-height:100px;
+            overflow: hidden;
+        }
+        .numberOfProduct{
+            transform: translateY(-5px);
+        } 
+        .cardNumber{
+            width: 70px;
+            border: 1px solid #1c1c1c;
+
+            transform: translateY(-7px);
+        }
+    }
+}

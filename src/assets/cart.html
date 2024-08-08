@@ -3,11 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="img/my-logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cartstyle.css">
+    <title>سبد خرید</title>
 </head>
-<body>
-    <script>
+<body class="position-relative">
+    <nav class="nav-top container-fluid p-4 border">
+        <div class="container mt-2">
+            <div class="row">
+                <div class="col-7 col-sm-6">
+                    <ul class="d-flex">
+                        <li class="list-unstyled me-3 nav-top-link"><a href=""
+                                class="text-decoration-none text-dark fw-bold" title="درباره ایران هولدینگ">درباره
+                                ما</a></li>
+                        <li class="list-unstyled me-3 sm-hidden nav-top-link"><a href=""
+                                class="text-decoration-none text-dark fw-bold" title="تماس با ما برای ثبت نام">تماس با
+                                ما</a></li>
+                        <li class="list-unstyled me-3 lg-hidden nav-top-link"><a href=""
+                                class="text-decoration-none text-dark fw-bold"
+                                title="اطلاعات بیشتر درباره شرکت ایران هولدینگ">اطلاعات بیشتر</a></li>
+                        <li class="list-unstyled nav-top-link"><a href="" class="text-decoration-none text-dark fw-bold"
+                                title="چرا باید مارا انتخاب کنید؟">چرا ما؟</a></li>
+                    </ul>
+                </div>
+                <div class="col-5 col-sm-6" dir="rtl">
+                    <ul class="d-flex">
+                        <li class="d-flex hover-dark-blue sm-hidden" dir="ltr" title="m.mohammadi8811@gmail.com"><i
+                                class="fa fa-envelope middle-nav-top-icon fs-5"></i><a
+                                href='mailto:"m.mohammad8811@gmail.com"'
+                                class="text-dark text-decoration-none ms-2">m.mohammadi8811@...</a></li>
+                        <li class="d-flex hover-dark-blue" dir="ltr" title="پیامک دادن به شماره : 09146360528"><i
+                                class="fa fa-comments middle-nav-top-icon fs-5"></i><a
+                                href="sms:+989146360528?body=سلام و عرض ادب"
+                                class="text-dark text-decoration-none me-3 ms-2"
+                                style="transform: translateY(2px);">09146360528</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- nav top section end -->
+    <!-- nav sticky section start -->
+    <nav class="container-fluid p-3 border border-3 position-sticky top-0" id="navSticky" dir="rtl">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="d-flex">
+                        <li class="mx-3 list-unstyled d-block d-md-none mt-3"><a href="javascript:void(0)"
+                                class="fa fa-bars text-dark text-decoration-none fw-bold fs-2 position-relative"
+                                id="barsOpen"></a></li>
+                        <li class="ms-3 list-unstyled mt-2"><a href="index.html"
+                                class="text-light text-decoration-none d-none d-md-block fw-bold">خانه</a></li>
+                        <li class="mx-3 list-unstyled mt-2"><a href=""
+                                class="text-light text-decoration-none d-none d-md-block fw-bold">پوشاک</a></li>
+                        <li class="mx-3 list-unstyled mt-2"><a href=""
+                                class="text-light text-decoration-none d-none d-md-block fw-bold">لوازم خانگی</a></li>
+                        <li class="mx-3 list-unstyled mt-2"><a href=""
+                                class="text-light text-decoration-none d-none d-md-block fw-bold">آشپزی</a></li>
+                        <li class="mx-3 list-unstyled mt-2"><a href=""
+                                class="text-light text-decoration-none d-none d-md-block fw-bold">سرگرمی</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- nav sticky section end -->
+    <!-- nav bottom section start -->
+    <nav class="container p-3" id="nav-bottom">
+        <div class="row mb-3 mx-4">
+            <marquee direction="ltr" class=" text-bold fs-5">ایران مارکت یکی از معتبرترین فروشگاه اینترنتی ایران هست و شما میتوانید با کمترین قیمت ممکن کالای مورد نظر را خریداری کنید</marquee>
+        </div>
+    </nav>
+    <!-- nav bottom section end -->
+    <!-- product section start -->
+    <section class=" p-3" id="cartProducts">
+        <div class="row"></div>
+        <button type="button" class="btn btn-success my-5">تصفیه حساب</button>
+    </section>
+    <!-- product section end -->
+    <!-- footer section start -->
+
+    <footer class="container-fluid footer footer-clip-path mt-5 p-5" dir="rtl">
+        <div class="container text-white" >
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <h3 class="footer-heading border-bottom pb-3 ms-5">categories</h3>
+                    <ul id="footerCategory">
+                        
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-sm-6 col-12">
+                    <h3 class="footer-heading border-bottom pt-md-0 pb-3 ms-5">social media</h3>
+                    <ul class="d-flex justify-content-evenly mt-4 social-media-icons">
+                        <li class="list-unstyled"><a href="https://wa.me/+989146360528" class="text-white fs-3"><i class="fab fa-whatsapp"></i></a></li>
+                        <li class="list-unstyled"><a href="https://t.me/MuhammedAltin2009" class="text-white fs-3"><i class="fab fa-telegram"></i></a></li>
+                        <li class="list-unstyled"><a href="https://instagram.com/mohammadmohammadi20091388" class="text-white fs-3"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-unstyled"><a href="https://twitter.com" class="text-white fs-3"><i class="fab fa-x-twitter"></i></a></li>
+                        <li class="list-unstyled"><a href="https://youtube.com" class="text-white fs-3"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12 col-12 mt-5 p-4 m-auto">
+                    <div class="d-flex justify-content-evenly">
+                        <a href="https://cafebazaar.ir"><img class="gray-hover bg-white rounded-1 p-1" src="https://7learn.com/assets/img/brands/bazar.png" alt="کافه بازار"></a>
+                        <a href="https://snappfood.ir"><img class="gray-hover bg-white rounded-1 p-1" src="https://7learn.com/assets/img/brands/snap-food.png" alt="اسنپ فود"></a>
+                        <a href="https://www.alibaba.ir"><img class="gray-hover bg-white rounded-1 p-1" src="https://7learn.com/assets/img/brands/alibaba.png" alt="علی بابا"></a>
+                        <a href="https://www.digikala.com"><img class="gray-hover bg-white rounded-1 p-1" src="https://7learn.com/assets/img/brands/digikala.svg" alt="دیجی کالا"></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    <div class="row last-text p-2 position-fixed bottom-0">
+        <h2 class="text-center vw-100 text-white">Mohammad Mohammadi</h2>
+    </div>
+    <!-- footer section end -->
+    <script src="js/cart.js"></script>
+    <!-- <script>
         console.log(localStorage.getItem('prod'))
-    </script>
+    </script> -->
 </body>
 </html>
