@@ -1,18 +1,17 @@
 "use strict";
 
 // variables
-const cartProduct = document.querySelector('#cartProducts div.row');
-let categories = fetch('https://fakestoreapi.com/products/categories').then(api => api.json());
-let result = JSON.parse(localStorage.getItem('product'));
-let cardNumber = document.getElementsByClassName('cardNumber');
-let changePrice = document.getElementById('changePrice');
-// let reckoning = document.getElementById('reckoning');
+const cartProduct = document.querySelector("#cartProducts div.row");
+let categories = fetch("https://fakestoreapi.com/products/categories").then(api => api.json());
+let result = JSON.parse(localStorage.getItem("product"));
+let cardNumber = document.getElementsByClassName("cardNumber");
+let changePrice = document.getElementById("changePrice");
 
 // nav sticky toggle
-barsOpen.onclick = ()=> {document.querySelector('#navSticky').classList.toggle('nav-sticky-block')};
+barsOpen.onclick = ()=>{document.querySelector("#navSticky").classList.toggle("nav-sticky-block")};
 
 // show product
-result.map((res)=>{
+result.map(res=>{
     let price = res.price;
     cartProduct.innerHTML += `
     <div class="card flex-row col-12 p-4 my-1 gap-2" dir="rtl">
@@ -28,11 +27,14 @@ result.map((res)=>{
     </div>
     </div>
     </div>`;
-})
-
-// footer categories 
-categories.then(res=>{
-    res.map(res=>{
-        footerCategory.innerHTML += `<li class="list-unstyled py-1 text-decoration-none text-white">${res}</li>`;
-    })
 });
+
+// reckoning button
+document.getElementById("reckoning").onclick =()=>{localStorage.removeItem("product")};
+
+// footer categories
+categories.then(res => {
+    res.map(res => {
+        footerCategory.innerHTML += `<li class="list-unstyled py-1 text-decoration-none text-white">${res}</li>`
+    })
+})
