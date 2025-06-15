@@ -1,3 +1,5 @@
+
+
 "use strict";
 // variables
 
@@ -11,6 +13,7 @@ const blow = document.getElementById('brow');
 // fetch fakeapistore.com
 let searchWords = ["electronics","jewelery","men's clothing","women's clothing","all"];
 let product = fetch('https://fakestoreapi.com/products').then(api => api.json());
+console.log("🚀 ~ product:", product)
 let categories = fetch('https://fakestoreapi.com/products/categories').then(api => api.json());
 
 // nav sticky toggle
